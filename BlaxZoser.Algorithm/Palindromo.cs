@@ -1,6 +1,6 @@
 ﻿namespace BlaxZoser.Algorithm
 {
-    //This is dev
+
     public class Palindromo  
     {
         public bool Is(string sentence)
