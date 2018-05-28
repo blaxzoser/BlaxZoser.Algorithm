@@ -1,12 +1,19 @@
-﻿namespace BlaxZoser.Algorithm
+﻿using System;
+
+namespace BlaxZoser.Algorithm
 {
-    //This is dev
-    public class Palindromo  
+
+    public class Palindromo : IAlgorithm
     {
-        public bool Is(string sentence)
+        private string _sentence;
+        public bool Calculate(string sentence)
         {
-            int length = sentence.Length;
-            char[] array = sentence.ToCharArray();
+            if (string.IsNullOrEmpty(sentence))
+                throw new Exception("It's empty");
+
+            _sentence = sentence.ToLower().Replace(" ","");
+            int length = _sentence.Length;
+            char[] array = _sentence.ToCharArray();
             bool isPalindromo = true;
             for (int i = 0; i <= length - 1; i++)
             {
@@ -23,5 +30,8 @@
             return isPalindromo;
         }
 
+        public Palindromo()
+        {
+        } 
     }
 }
