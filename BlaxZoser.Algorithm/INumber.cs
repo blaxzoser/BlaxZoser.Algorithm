@@ -4,8 +4,9 @@ using System.Text;
 
 namespace BlaxZoser.Algorithm
 {
-    interface IAlgorithm 
+    interface INumber
     {
-        bool Calculate(string sentence);
+        bool Is(int number);
+        int[] GiveAll(int n);
     }
 }
