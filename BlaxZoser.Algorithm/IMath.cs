@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BlaxZoser.Algorithm
 {
-    public interface IMath
+    public interface IMath 
     {
         int Calculate(int n);
     }

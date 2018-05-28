@@ -4,7 +4,7 @@ using Xunit;
 namespace BlaxZoser.UnitTest
 {
     public class FaltorialTest
-    {
+    { 
         [Fact]
         public void CalculateFactorialSmalNumber()
         {

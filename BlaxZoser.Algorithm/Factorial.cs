@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BlaxZoser.Algorithm
+namespace BlaxZoser.Algorithm 
 {
     public class Factorial : IMath
     {

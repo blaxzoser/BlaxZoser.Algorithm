@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BlaxZoser.Algorithm
 {
-    public class PrimeNumber : INumber
+    public class PrimeNumber : INumber 
     {
         private readonly IMath _factorial;
         public PrimeNumber()

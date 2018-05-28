@@ -6,7 +6,7 @@ namespace BlaxZoser.Algorithm
 {
     interface INumber
     {
-        bool Is(int number);
+        bool Is(int number); 
         int[] GiveAll(int n);
     }
 }

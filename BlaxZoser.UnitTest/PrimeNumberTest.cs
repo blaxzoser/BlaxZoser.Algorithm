@@ -4,10 +4,10 @@ using Xunit;
 namespace BlaxZoser.UnitTest
 {
     public class PrimeNumberTest
-    {
+    {  
 
-        [Fact]
-        public void ShuldBePrimeNumber()
+        [Fact] 
+        public void ShuldBePrimeNumber()  
         {
             //Arrage
             var isPrime = 3;
