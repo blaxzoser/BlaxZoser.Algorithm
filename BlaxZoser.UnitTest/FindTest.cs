@@ -60,8 +60,6 @@ namespace BlaxZoser.UnitTest
 
         }
 
-
-
         [Fact]
         public void ShouldGetNumbersRepeatN()
         {
