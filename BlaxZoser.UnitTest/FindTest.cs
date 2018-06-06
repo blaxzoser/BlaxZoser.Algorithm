@@ -76,5 +76,42 @@ namespace BlaxZoser.UnitTest
 
         }
 
+
+        [Fact]
+        public void ShouldFindPattern()
+        {
+            // arrange
+            var testSentence = new List<string> { "ab", "aa", "ab" };
+
+            var pattern = "ab";
+            var find = new Find();
+            var result = 2;
+
+            // Act
+            var resultArray = find.GetRepeatPattern(testSentence,pattern);
+
+            // Assert
+            Assert.Equal(result, resultArray);
+
+        }
+
+
+
+        [Fact]
+        public void DuplicateCountTest()
+        {
+            // arrange
+            var testSentence = "aabbcde";
+            var find = new Find();
+            var result = 2;
+
+            // Act
+            var resultArray = find.DuplicateCountUseLinq(testSentence);
+
+            // Assert
+            Assert.Equal(result, resultArray);
+
+        }
+
     }
 }
