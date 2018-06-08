@@ -18,8 +18,27 @@ namespace BlaxZoser.Algorithm
 
         public int[] GiveAll(int n)
         {
-            int[] array = new int[n];        
+            int[] array = new int[n];
+            int counter = 0;
+            int number = 1;
+            while (counter < n)
+            {
+                    if(IsPrime(number))
+                    {
+                        array[counter] = number;
+                        counter++;
+                    }
+              number++;
+            }
             return array;
+        }
+
+
+        public  bool IsPrime(int n)
+        {
+            if (n <= 2 || n % 2 == 0) return n == 2;
+            for (int i = 3; i <= Math.Sqrt(n); i += 2) if (n % i == 0) return false;
+            return true;
         }
 
         public bool Is(int number)
