@@ -113,5 +113,35 @@ namespace BlaxZoser.UnitTest
 
         }
 
+
+        [Fact]
+        public void MovingZerosToTheEndTest()
+        {
+            // arrange
+            var testSentence = new int[]{ 1, 2, 0, 1, 0, 1, 0, 3, 0, 1 };
+            var result = new int[] {1, 2, 1, 1, 3, 1, 0, 0, 0, 0};
+            var find = new Find();
+            // Act
+            var resultArray = find.MoveZerosToTheEnd(testSentence);
+
+            // Assert
+            Assert.Equal(result, resultArray);
+        }
+
+
+        [Fact]
+        public void MovingZerosToTheEndTestWitLambdas()
+        {
+            // arrange
+            var testSentence = new int[] { 1, 2, 0, 1, 0, 1, 0, 3, 0, 1 };
+            var result = new int[] { 1, 2, 1, 1, 3, 1, 0, 0, 0, 0 };
+            var find = new Find();
+            // Act
+            var resultArray = find.MoveZerosToTheEndLambdas(testSentence);
+
+            // Assert
+            Assert.Equal(result, resultArray);
+        }
+
     }
 }

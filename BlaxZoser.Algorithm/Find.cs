@@ -141,5 +141,26 @@ namespace BlaxZoser.Algorithm
         {
             return list.ToLower().GroupBy(c => c).Where(g => g.Count() > 1).Count();
         }
+
+        public int[] MoveZerosToTheEnd(int[] arr)
+        {
+            int[] cleanNumbers = new int[arr.Length]; //Note: we counting without zero 
+            var x = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] != 0)
+                {
+                    cleanNumbers[x] = arr[i];
+                    x++;
+                }
+            }                               
+            return cleanNumbers;
+        }
+
+        public int[] MoveZerosToTheEndLambdas(int[] arr)
+        {
+            return arr.OrderBy(x => x == 0).ToArray();
+        }
+
     }
 }

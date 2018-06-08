@@ -7,7 +7,7 @@ namespace BlaxZoser.UnitTest
     {  
 
         [Fact] 
-        public void ShuldBePrimeNumber()  
+        public void ShouldBePrimeNumber()  
         {
             //Arrage
             var isPrime = 3;
@@ -24,7 +24,7 @@ namespace BlaxZoser.UnitTest
 
 
         [Fact]
-        public void ShuldBePrimeNumberWith2()
+        public void ShouldBePrimeNumberWith2()
         {
             //Arrage
             var isPrime = 2;
@@ -39,7 +39,7 @@ namespace BlaxZoser.UnitTest
 
 
         [Fact]
-        public void ShuldBeNotPrimeNumber()
+        public void ShouldBeNotPrimeNumber()
         {
             //Arrage
             var isNotPrime = 4;
@@ -53,7 +53,7 @@ namespace BlaxZoser.UnitTest
         }
 
         [Fact]
-        public void ShuldBePrimeNumberWithTheoremaWilson()
+        public void ShouldBePrimeNumberWithTheoremaWilson()
         {
             //Arrage
             var isPrime = 89;
@@ -70,5 +70,53 @@ namespace BlaxZoser.UnitTest
 
         }
 
+        [Fact]
+        public void ShouldGiveXPrimeNumbers()
+        {
+            //Arrage
+            var array = new int[] { 2,3,5,7 };
+            PrimeNumber primerNumber = new PrimeNumber();
+
+            //Act
+            var result = primerNumber.GiveAll(4);
+
+            //Assert
+            Assert.Equal(array, result);
+        }
+
+
+
+        [Fact]
+        public void ShouldBePrimeAnotherMethod()
+        {
+            //Arrage
+            var isPrime = 3;
+            PrimeNumber primerNumber = new PrimeNumber();
+
+            //Act
+            var result = primerNumber.IsPrime(isPrime);
+
+
+            //Assert
+            Assert.True(result);
+
+        }
+
+
+        [Fact]
+        public void ShouldBeNotPrimeAnotherMethod()
+        {
+            //Arrage
+            var isPrime = 4;
+            PrimeNumber primerNumber = new PrimeNumber();
+
+            //Act
+            var result = primerNumber.IsPrime(isPrime);
+
+
+            //Assert
+            Assert.False(result);
+
+        }
     }
 }
